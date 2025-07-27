@@ -490,7 +490,7 @@
         },
         {
             "MatchRegexString": "^Steam$",
-            "TargetCss": "src/css/gridCustomizations.css"
+            "TargetCss": "src/css/customizations.css"
         }
     ]
 }
