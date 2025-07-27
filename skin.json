@@ -1,5 +1,5 @@
 {
-    "version": "20250718",
+    "version": "20250725",
     "name": "SpaceTheme for Steam",
     "description": "A modular design with dark colors intended to enhance navigability and improve user experience.",
     "author": "SpaceEnergy",
@@ -164,7 +164,7 @@
 
         "General - Achievement Notification": {
             "description": "Hide the Achievment Notification (Sound is still there)",
-            "default": "yes",
+            "default": "no",
             "tab": "General",
             "section": "Other",
             "values": {
