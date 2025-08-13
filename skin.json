@@ -1,5 +1,5 @@
 {
-    "version": "20250727",
+    "version": "20250812",
     "name": "SpaceTheme for Steam",
     "description": "A modular design with dark colors intended to enhance navigability and improve user experience.",
     "author": "SpaceEnergy",
@@ -127,20 +127,19 @@
                 },
                 "Gluten": {
                     "TargetCss": { "affects": [".*"], "src": "options/fonts/gluten.css" }
-                }
-                ,
+                },
+                "Montserrat": {
+                    "TargetCss": { "affects": [".*"], "src": "options/fonts/montserrat.css" }
+                },
                 "Quicksand": {
                     "TargetCss": { "affects": [".*"], "src": "options/fonts/quicksand.css" }
-                }
-                ,
+                },
                 "Roboto": {
                     "TargetCss": { "affects": [".*"], "src": "options/fonts/roboto.css" }
-                }
-                ,
+                },
                 "Source Code Pro": {
                     "TargetCss": { "affects": [".*"], "src": "options/fonts/sourceCodePro.css" }
-                }
-                ,
+                },
                 "Ubuntu": {
                     "TargetCss": { "affects": [".*"], "src": "options/fonts/ubuntu.css" }
                 }
@@ -157,6 +156,20 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": [".*"], "src": "options/general/systemAccent.css" }
+                }
+            }
+        },
+
+
+        "General - Mica & Acrylic plugin support": {
+            "description": "Support for Mica and Acrylic plugin https://steambrew.app/plugin?id=b4c58634419b (Only works with the standard theme colors)",
+            "default": "no",
+            "tab": "General",
+            "section": "Other",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": [".*"], "src": "options/general/dwmxSupport.css" }
                 }
             }
         },
@@ -339,6 +352,23 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/library/home/shinyEffect.css" }
+                }
+            }
+        },
+
+
+        "Library - Banner position": {
+            "description": "Change the position of the banner (applies to all banners)",
+            "default": "Middle (default)",
+            "tab": "Library",
+            "section": "Gamepage",
+            "values": {
+                "Left": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/bannerPosition/left.css" }
+                },
+                "Middle (default)": {},
+                "Right": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/bannerPosition/right.css" }
                 }
             }
         },
