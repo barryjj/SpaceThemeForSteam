@@ -1,5 +1,5 @@
 {
-    "version": "20250812",
+    "version": "20250819",
     "name": "SpaceTheme for Steam",
     "description": "A modular design with dark colors intended to enhance navigability and improve user experience.",
     "author": "SpaceEnergy",
@@ -10,8 +10,8 @@
     "funding": { "kofi": "spacetheme" },
     "discord_support": { "inviteCodeExcludingLink": "7Zv8Xz3Vzn" },
     "tags": [ "WIP", "Modular", "Dark", "Customizable"],
-    "header_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/_assets/img/banner.png",
-    "splash_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/_assets/img/preview.png",
+    "header_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/banner.png",
+    "splash_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/preview/preview.png",
     "RootColors": "./src/css/root.css",
     "Steam-WebKit": "./src/css/webkit.css",
     "Conditions": {
@@ -175,6 +175,20 @@
         },
 
 
+        "General - Window Controls": {
+            "description": "Hide the Window Controls (Minimize, Maximize, Close) from the titlebar",
+            "default": "no",
+            "tab": "General",
+            "section": "Other",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls.css" }
+                }
+            }
+        },
+
+
         "General - Achievement Notification": {
             "description": "Hide the Achievment Notification (Sound is still there)",
             "default": "no",
@@ -242,6 +256,20 @@
 
         "Store - Broadcast": {
             "description": "Hide broadcasts on the store gamepage",
+            "default": "no",
+            "tab": "Store",
+            "section": "Gamepage",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/gamepage/broadcast.css" }
+                }
+            }
+        },
+
+
+        "Store - Info sidebar on right": {
+            "description": "Changes the info sidebar from right to left",
             "default": "no",
             "tab": "Store",
             "section": "Gamepage",
