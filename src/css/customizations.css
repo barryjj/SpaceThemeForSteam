@@ -59,3 +59,8 @@ body :has(.userpannel-buttoncontainer) .NarrowWindow ._1SvpjsckP9cPRxO6gCBHrw:ha
     margin: 0px !important;
     border: none !important;
 }
+
+/* Get rid of new to library label */
+._2jj5TjFhHD1lvxMlpJYek6 {
+    visibility: hidden !important;
+}
