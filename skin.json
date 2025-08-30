@@ -1,11 +1,11 @@
 {
     "version": "20250821",
-    "name": "SpaceTheme for Steam",
-    "description": "A modular design with dark colors intended to enhance navigability and improve user experience.",
-    "author": "SpaceEnergy",
+    "name": "SpaceTheme for Steam (Forked)",
+    "description": "SpaceEnergy's SpaceTheme for Steam but with customizations for my personal preferences",
+    "author": "corrosivefrost",
     "github": {
-        "owner": "SpaceTheme",
-        "repo_name": "Steam"
+        "owner": "barryjj",
+        "repo_name": "SpaceThemeForSteam"
     },
     "funding": { "kofi": "spacetheme" },
     "discord_support": { "inviteCodeExcludingLink": "7Zv8Xz3Vzn" },
