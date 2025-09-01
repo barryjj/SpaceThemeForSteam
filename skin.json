@@ -1,5 +1,6 @@
 {
-    "version": "20250821",
+<<<<<<< HEAD
+    "version": "20250901",
     "name": "SpaceTheme for Steam (Forked)",
     "description": "SpaceEnergy's SpaceTheme for Steam but with customizations for my personal preferences",
     "author": "corrosivefrost",
@@ -22,6 +23,20 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/general/navigationButtons.css" }
+                }
+            }
+        },
+
+
+        "General - Sidebar only on hover": {
+            "description": "Shows only the sidebar in the store on hover",
+            "default": "no",
+            "tab": "General",
+            "section": "Sidebar",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/showSidebarOnHover.css" }
                 }
             }
         },
@@ -175,13 +190,16 @@
 
         "General - Window Controls": {
             "description": "Hide the Window Controls (Minimize, Maximize, Close) from the titlebar",
-            "default": "no",
+            "default": "Show",
             "tab": "General",
             "section": "Other",
             "values": {
-                "no": {},
-                "yes": {
-                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls.css" }
+                "Show": {},
+                "Show only on hover": {
+                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls/showOnHover.css" }
+                },
+                "Hide": {
+                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls/hide.css" }
                 }
             }
         },
@@ -289,20 +307,6 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/cart/recommendations.css" }
-                }
-            }
-        },
-
-
-        "Store - Sidebar only on hover": {
-            "description": "Store sidebar only on hover",
-            "default": "no",
-            "tab": "Store",
-            "section": "Other",
-            "values": {
-                "no": {},
-                "yes": {
-                    "TargetCss": { "affects": ["^Steam$"], "src": "options/store/showSidebarOnHover.css" }
                 }
             }
         },
