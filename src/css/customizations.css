@@ -64,3 +64,9 @@ body :has(.userpannel-buttoncontainer) .NarrowWindow ._1SvpjsckP9cPRxO6gCBHrw:ha
 ._2jj5TjFhHD1lvxMlpJYek6 {
     visibility: hidden !important;
 }
+
+/* Remove background when notification is active */
+._2Szzh5sKyGgnLUR870zbDE._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR {
+    background: transparent !important;
+    background-color: transparent !important;
+}
