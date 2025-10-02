@@ -13,6 +13,23 @@
     "RootColors": "./src/css/root.css",
     "Steam-WebKit": "./src/css/webkit.css",
     "Conditions": {
+        "General - Window Controls": {
+            "description": "Hide the Window Controls (Minimize, Maximize, Close) from the titlebar",
+            "default": "Show",
+            "tab": "General",
+            "section": "Titlebar",
+            "values": {
+                "Show": {},
+                "Show only on hover": {
+                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls/showOnHover.css" }
+                },
+                "Hide": {
+                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls/hide.css" }
+                }
+            }
+        },
+
+
         "General - Navigation buttons": {
             "description": "Hide Navigation buttons",
             "default": "no",
@@ -23,6 +40,20 @@
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/general/navigationButtons.css" }
                 }
+            }
+        },
+
+
+        "General - Always show sidebar": {
+            "description": "Always show the sidebar \n (If you have this option on Disabled, and you use the \"Userpannel\" or \"Sidebar only on hover\" option, this option will be overwritten)",
+            "default": "Enabled",
+            "tab": "General",
+            "section": "Sidebar",
+            "values": {
+                "Enabled": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/alwaysShowSidebar.css" }
+                },
+                "Disabled": {}
             }
         },
 
@@ -187,23 +218,6 @@
         },
 
 
-        "General - Window Controls": {
-            "description": "Hide the Window Controls (Minimize, Maximize, Close) from the titlebar",
-            "default": "Show",
-            "tab": "General",
-            "section": "Other",
-            "values": {
-                "Show": {},
-                "Show only on hover": {
-                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls/showOnHover.css" }
-                },
-                "Hide": {
-                    "TargetCss": { "affects": [".*"], "src": "options/general/windowControls/hide.css" }
-                }
-            }
-        },
-
-
         "General - Achievement Notification": {
             "description": "Hide the Achievment Notification (Sound is still there)",
             "default": "no",
@@ -320,20 +334,6 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/store/urlBar.css" }
-                }
-            }
-        },
-
-
-        "Store - Gamepage": {
-            "description": "Store Gamepage from the concept",
-            "default": "no",
-            "tab": "Store",
-            "section": "Experimental",
-            "values": {
-                "no": {},
-                "yes": {
-                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/gamepage/storeGamepage.css" }
                 }
             }
         },
