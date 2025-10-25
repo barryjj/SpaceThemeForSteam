@@ -45,12 +45,26 @@ body :has(.userpannel-buttoncontainer) .NarrowWindow ._1SvpjsckP9cPRxO6gCBHrw:ha
 }
 
 /* Remove spacing from most grids/shelves, fix behaviour of window resizing to prevent introducing spaces */
-[style*="grid-template-columns"] {
+/*[role="grid"][style*="grid-template-columns"] {
     grid-template-columns: repeat(auto-fit, minmax(222px, 1fr)) !important;
     gap: 0px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
+}*/
+
+/* Fix Recent Games negative margin variable */
+._3CJctA7pLVdwHzNF5JmORE._1urF0O1V4DZOkjI28mDvRK {
+    --negative-margin: 0px !important;
 }
+
+[role="grid"][style*="grid-template-columns"] {
+    grid-template-columns: repeat(auto-fill, minmax(222px, 1fr)) !important;
+    gap: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    justify-content: start !important;
+}
+
 
 /* Remove spacing from Recent Games list */
 [role="list"][aria-label="Recent Games"] {
@@ -66,7 +80,9 @@ body :has(.userpannel-buttoncontainer) .NarrowWindow ._1SvpjsckP9cPRxO6gCBHrw:ha
 }
 
 /* Remove background when notification is active */
-._2Szzh5sKyGgnLUR870zbDE._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR {
+/*._2Szzh5sKyGgnLUR870zbDE._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR */
+._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd
+ {
     background: transparent !important;
     background-color: transparent !important;
 }
