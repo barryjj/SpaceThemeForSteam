@@ -212,7 +212,7 @@
             "values": {
                 "no": {},
                 "yes": {
-                    "TargetCss": { "affects": [".*"], "src": "options/general/dwmxSupport.css" }
+                    "TargetCss": { "affects": [".*"], "src": "src/css/plugins/dwmx.css" }
                 }
             }
         },
@@ -263,26 +263,6 @@
 
 
 
-        "Store - SteamDeck & Giftcard": {
-            "description": "Hide SteamDeck, Giftcard or both from the stores sidebar",
-            "default": "Show",
-            "tab": "Store",
-            "section": "Home",
-            "values": {
-                "Show": {},
-                "SteamDeck": {
-                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/home/steamdeckAndGiftcard/steamdeck.css" }
-                },
-                "Giftcard": {
-                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/home/steamdeckAndGiftcard/giftcard.css" }
-                },
-                "Both": {
-                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/home/steamdeckAndGiftcard/both.css" }
-                }
-            }
-        },
-
-
         "Store - Broadcast": {
             "description": "Hide broadcasts on the store gamepage",
             "default": "no",
@@ -325,6 +305,34 @@
         },
 
 
+        "Store - Digital product info": {
+            "description": "Hides the info that the purchase is a digital product",
+            "default": "no",
+            "tab": "Store",
+            "section": "Cart",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/cart/digidalProductInfo.css" }
+                }
+            }
+        },
+
+
+        "Store - Follow the creators": {
+            "description": "Hide Follow the creators",
+            "default": "no",
+            "tab": "Store",
+            "section": "Cart",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/cart/followCreators.css" }
+                }
+            }
+        },
+
+
         "Store - URL bar": {
             "description": "Hide URL bar",
             "default": "no",
@@ -334,6 +342,20 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["^Steam$"], "src": "options/store/urlBar.css" }
+                }
+            }
+        },
+
+
+        "Store - Footer": {
+            "description": "Hide Valve/Steam footer",
+            "default": "no",
+            "tab": "Store",
+            "section": "Other",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": [".*"], "src": "options/store/footer.css" }
                 }
             }
         },
@@ -386,6 +408,20 @@
         },
 
 
+        "Library - Darken not installed games": {
+            "description": "Darkens game cards when they are not installed",
+            "default": "yes",
+            "tab": "Library",
+            "section": "Home",
+            "values": {
+                "no": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/home/undarkUninstalled.css" }
+                },
+                "yes": {}
+            }
+        },
+
+
         "Library - Banner position": {
             "description": "Change the position of the banner (applies to all banners)",
             "default": "Middle (default)",
@@ -417,7 +453,7 @@
         },
 
 
-        "Library - Steam-Custom-Artowrks Support": {
+        "Library - Steam-Custom-Artworks Support": {
             "description": "For the best support for https://github.com/SpaceTheme/Steam-Custom-Artworks ",
             "default": "no",
             "tab": "Library",
