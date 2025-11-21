@@ -1,49 +1,76 @@
 @import url("./webkit/store/agecheck.css");
+@import url("./webkit/store/bundleInfo.css");
 @import url("./webkit/store/cart.css");
+@import url("./webkit//store/checkout.css");
 @import url("./webkit/store/game.css");
 @import url("./webkit/store/home.css");
 @import url("./webkit/store/news.css");
 @import url("./webkit/store/wishlist.css");
 @import url("./webkit/profile.css");
+@import url("./webkit/community/profile/awards.css");
+@import url("./webkit/community/profile/user.css");
 
-@import url("./webkit/store/pointshop.css");
+@import url("./webkit/store/pointsshop.css");
+@import url("./webkit/store/stats.css");
+
+@import url("./plugins/extendium/plugins.css");
 
 :root {
     --st-store-max-width: 1200px;
 
-    --store-menu-overlap-height: 80px;
+    --store-menu-overlap-height: 90px;
 }
 * {
-    --store-menu-overlap-height: 80px !important;
+    --store-menu-overlap-height: 90px !important;
 }
 
 /*
 & Base
 */
 
-body.v6,
-body.v6.game_bg,
-body.v6 .game_page_background.game,
-.home_cluster_ctn {
+body {
     background: transparent !important;
     background-color: transparent !important;
 }
-body.v6::before,
-body.v6.game_bg::before,
-body.v6 .game_page_background::before {
-    content: "";
-    z-index: -1;
-    position: fixed;
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    border-radius: 8px;
-    background-color: rgb(var(--st-color-1));
+body::before {
+    content: "" !important;
+    z-index: -1 !important;
+    position: fixed !important;
+    display: block !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 8px !important;
+    background-color: rgb(var(--st-color-1)) !important;
 }
 
-body.v6::-webkit-scrollbar {
-    background-color: rgb(var(--st-color-1));
-    border-radius: 0 8px 8px 0;
+body.responsive_page .apphub_background {
+    background-image: unset !important;
+}
+
+body::-webkit-scrollbar {
+    background-color: rgb(var(--st-color-1)) !important;
+    border-radius: 0 8px 8px 0 !important;
+}
+
+
+
+body .page_content_ctn,
+body .page_content,
+body .maincontent,
+body ._22xtsolKcQit92o-LBeRWD {
+    position: relative;
+    width: 100% !important;
+    max-width: var(--st-store-max-width) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+body.v6 .leftcol {
+    width: calc(var(--st-store-max-width) - 372px - 16px) !important;
+}
+
+body.v6 .rightcol {
+    width: 372px !important;
 }
 
 
@@ -59,7 +86,7 @@ body.v6::-webkit-scrollbar {
     max-width: var(--st-store-max-width);
     height: unset !important;
     margin: 16px auto 0;
-    padding: 6px 16px;
+    padding: 6px 12px;
     border: 0 !important;
     border-radius: 8px;
     background: none;
@@ -71,6 +98,24 @@ body.v6::-webkit-scrollbar {
 .gQWgnAxVrOM- .qxuaSNtrNvE- .v2uRRqcZpzM- {
     width: 100%;
     height: auto;
+}
+
+
+/*
+! Placeholder
+*/
+html body.v6 .StoreMenuLoadingPlaceholder .PlaceholderInner {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    width: 100%;
+    max-width: var(--st-store-max-width);
+    height: 42px;
+    border-radius: 8px;
+    background: none;
+    background-color: rgb(var(--st-color-2));
+    box-shadow: 0px 4px 8px 0px rgba(var(--st-background), 0.5);
+    transform: translate(-50%);
 }
 
 
@@ -107,6 +152,12 @@ body.v6::-webkit-scrollbar {
 .h2B3SGR_w4RWdrnsRZEcD ._16jZ3HEbtaJTl80pQINN2Y ._3CtcPWgZYR05CldoJ0Jkrx ._175B12uOwmeGBNcSaQFe-Z ._3gaaE-cRfFWJdZcC8XMi0x,
 .gQWgnAxVrOM- .qxuaSNtrNvE- .v2uRRqcZpzM- .In8c5bkG5eM- ._-4fVuiRLPho- .IOoilFOfWUQ-  {
     background-color: rgb(var(--st-accent-1));
+}
+
+
+/** Right Buttons */
+.h2B3SGR_w4RWdrnsRZEcD ._16jZ3HEbtaJTl80pQINN2Y ._7FiqKP7fZJGltkwRxPG6s ._1wn1lBlAzl3HMRqS1llwie {
+    padding: 0;
 }
 
 
@@ -499,17 +550,122 @@ body.v6::-webkit-scrollbar {
 
 
 /*
-& Footer
+& Live tag
 */
-html body.v6 #footer {
-    width: var(--st-store-max-width);
-    margin: 0 auto 16px;
-    padding: 0 16px 16px;
+html body.v6 ._2R1rYdwKuMFLsEb4WvJYdD,
+html body.v6 .broadcast_live_stream_icon {
+    display: inline-flex;
+    height: max-content;
+    margin-right: 12px;
+    padding: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 13px;
+    letter-spacing: 0px;
+    border: 3px solid rgb(var(--st-red));
+    border-radius: 8px;
+    color: #fff !important;
+    background: unset;
+    background-color: rgb(var(--st-background), .6);
+    box-shadow: unset;
+}
+
+html body.v6 ._2R1rYdwKuMFLsEb4WvJYdD::before,
+html body.v6 .broadcast_live_stream_icon::before {
+    content: "";
+    display: flex;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    border-radius: 80px;
+    background-color: rgb(var(--st-red));
+}
+
+
+
+
+/*
+& Skeleton
+*/
+body.v6 [class*="skeleton"] {
+    border-radius: 8px !important;
+}
+
+
+
+
+/*
+& Profile Pages Header
+*/
+body .profile_small_header_bg {
+    overflow: hidden;
+    max-width: var(--st-store-max-width);
+    height: unset;
+    margin: 0 auto 32px;
+}
+
+body .profile_small_header_bg .profile_small_header_texture {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: unset;
+    height: unset;
+    margin-top: 16px;
+    padding: 16px;
     border-radius: 8px;
     background-color: rgb(var(--st-color-2));
 }
 
+
+/*
+! Avatar
+*/
+body .profile_small_header_bg .profile_small_header_avatar {
+    position: unset;
+}
+
+
+/*
+! Text
+*/
+body .profile_small_header_bg .profile_small_header_text {
+    position: unset;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-height: unset;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+
+/** Username */
+body .profile_small_header_bg .profile_small_header_name {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+/*
+& Footer
+*/
+html body.responsive_page #footer {
+    width: var(--st-store-max-width);
+    margin: 0 auto 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: rgb(var(--st-color-2));
+}
+
+html body.responsive_page #footer .footer_content {
+    width: unset;
+    padding-top: 0;
+}
+
 /* Top Divider */
-html body.v6 #footer .rule:nth-child(1) {
+html body.responsive_page #footer .rule:nth-child(1) {
     display: none;
 }
