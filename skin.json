@@ -72,6 +72,20 @@
         },
 
 
+        "General - Friend icon": {
+            "description": "Hide the friend icon from the game item",
+            "default": "no",
+            "tab": "General",
+            "section": "Sidebar",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/general/friendIcon.css" }
+                }
+            }
+        },
+
+
         "General - Wallet balance": {
             "description": "Hide wallet balance",
             "default": "no",
@@ -291,6 +305,20 @@
         },
 
 
+        "Store - Write a Review": {
+            "description": "Hide the Write a Review section",
+            "default": "no",
+            "tab": "Store",
+            "section": "Gamepage",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/gamepage/writeReview.css" }
+                }
+            }
+        },
+
+
         "Store - Recommendations": {
             "description": "Hide recommendations in the cart",
             "default": "no",
@@ -328,6 +356,20 @@
                 "no": {},
                 "yes": {
                     "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/cart/followCreators.css" }
+                }
+            }
+        },
+
+
+        "Store - Landing Header": {
+            "description": "Hide the landing header (this with the big coin)",
+            "default": "no",
+            "tab": "Store",
+            "section": "Points Shop",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["https://.*\\.steampowered\\.com(/.*)?"], "src": "options/store/pointshop/header.css" }
                 }
             }
         },
@@ -524,6 +566,20 @@
                 },
                 "For all": {
                     "TargetCss": { "affects": ["https://steamcommunity\\.com(/.*)?"], "src": "options/community/vacBan/all.css" }
+                }
+            }
+        },
+
+
+        "Community - Profile pages header": {
+            "description": "Hide the profile pages header",
+            "default": "no",
+            "tab": "Community",
+            "section": "Other",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["https://steamcommunity\\.com(/.*)?"], "src": "options/community/profilePagesHeader.css" }
                 }
             }
         }
