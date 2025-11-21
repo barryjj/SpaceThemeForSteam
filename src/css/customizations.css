@@ -86,3 +86,14 @@ body :has(.userpannel-buttoncontainer) .NarrowWindow ._1SvpjsckP9cPRxO6gCBHrw:ha
     background: transparent !important;
     background-color: transparent !important;
 }
+
+
+/* get rid of weird empty rectangle above recent games */
+._3SkuN_ykQuWGF94fclHdhJ {
+  display: none !important;
+}
+
+/* fix alignment by moving padding */
+._3Sb2o_mQ30IDRh0C72QUUu {
+    padding: 0px 0px 0px 0px;
+}
