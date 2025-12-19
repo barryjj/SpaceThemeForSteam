@@ -81,8 +81,14 @@ body :has(.userpannel-buttoncontainer) .NarrowWindow ._1SvpjsckP9cPRxO6gCBHrw:ha
 
 /* Remove background when notification is active */
 /*._2Szzh5sKyGgnLUR870zbDE._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR */
-._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd
- {
+._2Szzh5sKyGgnLUR870zbDE.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Remove background when notifications are active */
+/*._2Szzh5sKyGgnLUR870zbDE._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR */
+._2Szzh5sKyGgnLUR870zbDE {
     background: transparent !important;
     background-color: transparent !important;
 }
