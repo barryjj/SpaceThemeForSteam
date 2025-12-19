@@ -1,3 +1,4 @@
+@import url("./webkit/profile.css");
 @import url("./webkit/store/agecheck.css");
 @import url("./webkit/store/bundleInfo.css");
 @import url("./webkit/store/cart.css");
@@ -5,13 +6,13 @@
 @import url("./webkit/store/game.css");
 @import url("./webkit/store/home.css");
 @import url("./webkit/store/news.css");
+@import url("./webkit/store/pointsshop.css");
+@import url("./webkit/store/search.css");
+@import url("./webkit/store/stats.css");
 @import url("./webkit/store/wishlist.css");
-@import url("./webkit/profile.css");
+
 @import url("./webkit/community/profile/awards.css");
 @import url("./webkit/community/profile/user.css");
-
-@import url("./webkit/store/pointsshop.css");
-@import url("./webkit/store/stats.css");
 
 @import url("./plugins/extendium/plugins.css");
 
@@ -71,6 +72,62 @@ body.v6 .leftcol {
 
 body.v6 .rightcol {
     width: 372px !important;
+}
+
+
+
+/*
+! Price Tags
+*/
+body .discount_block.empty {
+    display: none !important;
+}
+
+body .discount_block {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    margin: 0 0 0 auto !important;
+    padding: 6px !important;
+    font-weight: 600 !important;
+    line-height: unset !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    background-color: rgb(var(--st-color-1)) !important;
+}
+
+body .discount_block .discount_pct {
+    height: unset !important;
+    padding: 4px 6px !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    line-height: unset !important;
+    border-radius: 8px !important;
+    color: rgb(var(--st-green)) !important;
+    background-color: rgb(var(--st-green), .3) !important;
+}
+
+body .discount_block .discount_prices {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: end !important;
+    height: unset !important;
+    padding: 0 !important;
+    background-color: unset !important;
+}
+
+body .discount_block .discount_prices .discount_final_price {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: unset !important;
+    color: rgb(var(--st-green)) !important;
+}
+body .discount_block.no_discount .discount_prices .discount_final_price {
+    color: #fff !important;
 }
 
 
