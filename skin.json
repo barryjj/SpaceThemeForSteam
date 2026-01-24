@@ -10,8 +10,6 @@
     "tags": [ "WIP", "Modular", "Dark", "Customizable"],
     "header_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/banner.png",
     "splash_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/preview/preview.png",
-    "RootColors": "./src/css/root.css",
-    "Steam-WebKit": "./src/css/webkit.css",
     "Conditions": {
         "General - Window Controls": {
             "description": "Hide the Window Controls (Minimize, Maximize, Close) from the titlebar",
@@ -405,6 +403,20 @@
 
 
 
+        "Library - Steam-Custom-Artworks Support": {
+            "description": "The best support for https://spacetheme.net/#steam-custom-artworks ",
+            "default": "no",
+            "tab": "Library",
+            "section": "Pined",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/customArtwork.css" }
+                }
+            }
+        },
+
+        
         "Library - What's New": {
             "description": "Customize the What's New section",
             "default": "Compact",
@@ -471,11 +483,11 @@
             "section": "Gamepage",
             "values": {
                 "Left": {
-                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/bannerPosition/left.css" }
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/bannerPosition/left.css" }
                 },
                 "Middle (default)": {},
                 "Right": {
-                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/bannerPosition/right.css" }
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/bannerPosition/right.css" }
                 }
             }
         },
@@ -493,21 +505,20 @@
                 }
             }
         },
+        
 
-
-        "Library - Steam-Custom-Artworks Support": {
-            "description": "The best support for https://spacetheme.net/#steam-custom-artworks ",
+        "Library - Banner Infos": {
+            "description": "Only show banner infos (collection, hltb plugin infos) on hover",
             "default": "no",
             "tab": "Library",
             "section": "Gamepage",
             "values": {
                 "no": {},
                 "yes": {
-                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/customArtwork.css" }
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/showBannerInfosOnHover.css" }
                 }
             }
         },
-
 
 
         "Library - Always show game infos": {
@@ -584,6 +595,8 @@
             }
         }
     },
+    "RootColors": "./src/css/root.css",
+    "Steam-WebKit": "./src/css/webkit.css",
     "Patches": [
         {
             "MatchRegexString": ".*",
