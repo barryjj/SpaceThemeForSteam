@@ -119,8 +119,8 @@
 }
 
 
-/* Community Hub */
-.game_bg.application .page_title_area .apphub_OtherSiteInfo .btn_medium {
+/*TODO SteamDB buttons */
+.game_bg.application .page_title_area .apphub_OtherSiteInfo .btn_steamdb {
     display: none;
 }
 
@@ -881,7 +881,7 @@ body.v6 div.leftcol:has(.highlight_ctn) {
 
 
 /*
-& Details 
+& Details
 */
 .game_bg.application #game_highlights .rightcol {
     grid-area: details;
@@ -1079,6 +1079,7 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
     display: flex;
     width: auto !important;
     height: unset;
+    margin-bottom: 16px !important;
     padding: 12px !important;
     font-size: 16px;
     font-weight: 600;
@@ -1124,9 +1125,6 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
     border-radius: 8px;
     background: none;
     background-color: rgb(var(--st-color-2));
-}
-.game_bg.application:has(.game_area_already_owned) .game_area_play_stats {
-    margin-top: 16px;
 }
 
 
@@ -1356,7 +1354,7 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
 .game_bg.application .game_description_column .game_area_purchase .game_area_purchase_game h2 {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - 138px);
     margin-bottom: 2px;
     font-size: 20px;
     font-weight: 600;
@@ -1366,6 +1364,8 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
 
 /* Bundle text */
 .game_bg.application .game_description_column .game_area_purchase .game_area_purchase_game .title .bundle_label {
+    position: absolute;
+    right: 12px;
     font-size: 14px;
     font-weight: 600;
     color: rgb(var(--st-blue));
@@ -1394,7 +1394,7 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
 .game_bg.application .game_description_column .game_area_purchase .bundle_contents_preview,
 .game_bg.application .game_description_column .game_area_purchase .package_contents_capsules_ctn {
     width: fit-content;
-    margin: 6px 0 0;
+    margin: 12px 0 0;
     padding: 0;
     background-color: unset;
 }
@@ -1402,15 +1402,22 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
 /* List */
 .game_bg.application .game_description_column .game_area_purchase .bundle_contents_preview_position,
 .game_bg.application .game_description_column .game_area_purchase .package_contents_capsules {
+    overflow: visible;
     display: flex;
     gap: 6px;
     height: unset;
+}
+.game_bg.application .game_description_column .game_area_purchase .package_contents_capsules::after {
+    display: none !important;
 }
 
 .game_bg.application .game_description_column .game_area_purchase .bundle_contents_preview_item,
 .game_bg.application .game_description_column .game_area_purchase .package_contents_capsule {
     position: relative;
+    left: 0 !important;
     display: none;
+    margin: 0 !important;
+    box-shadow: unset;
 }
 .game_bg.application .game_description_column .game_area_purchase .bundle_contents_preview_item:nth-child(-n+3),
 .game_bg.application .game_description_column .game_area_purchase .package_contents_capsule:nth-child(-n+3) {
@@ -1421,14 +1428,14 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
 /* on Wishlist icon */
 .game_bg.application .game_description_column .game_area_purchase .game_area_purchase_game_wrapper .ds_wishlist_flag {
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: -6px;
+    left: -6px;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: unset;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     padding: 0px;
     font-size: 0;
     border-radius: 8px;
@@ -1568,7 +1575,7 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
     gap: 6px;
     height: unset;
     margin: 0;
-    padding: 6px;
+    padding: 6px !important;
     font-size: 14px;
     font-weight: 600;
     line-height: unset;
@@ -1610,24 +1617,6 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
 }
 
 /* Price */
-.game_bg.application .game_description_column .game_area_purchase .discount_prices {
-    height: unset;
-    padding: 0;
-    background-color: unset;
-}
-
-.game_bg.application .game_description_column .game_area_purchase .discount_original_price {
-    top: 0;
-    right: 0;
-}
-
-.game_bg.application .game_description_column .game_area_purchase .discount_final_price {
-    padding-left: 0;
-    padding-right: 0;
-    font-weight: 600;
-    line-height: unset;
-    color: rgb(var(--st-green));
-}
 .game_bg.application .game_description_column .game_area_purchase .no_discount .discount_final_price {
     color: #fff;
 }
@@ -1744,73 +1733,25 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
     display: none;
 }
 
-/*^ 21+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="21"])::before {
-    content: "21";
-    border: 3px solid rgb(var(--st-red));
-    color: rgb(var(--st-red));
-    background-color: rgb(var(--st-red), .2);
+/*^ 0+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(.game_rating_allages, img[alt*="0"])::before {
+    content: "0";
+    border: 3px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, .2);
 }
 
-/*^ 18+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="18"])::before {
-    content: "18";
-    border: 3px solid rgb(var(--st-red));
-    color: rgb(var(--st-red));
-    background-color: rgb(var(--st-red), .2);
+/*^ 3+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="3"])::before {
+    content: "3";
+    border: 3px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, .2);
 }
 
-/*^ 17+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="17"])::before {
-    content: "17";
-    border: 3px solid rgb(var(--st-blue));
-    color: rgb(var(--st-blue));
-    background-color: rgb(var(--st-blue), .2);
-}
-
-/*^ 16+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="16"])::before {
-    content: "16";
-    border: 3px solid rgb(var(--st-blue));
-    color: rgb(var(--st-blue));
-    background-color: rgb(var(--st-blue), .2);
-}
-
-/*^ 15+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="15"])::before {
-    content: "15";
-    border: 3px solid rgb(var(--st-green));
-    color: rgb(var(--st-green));
-    background-color: rgb(var(--st-green), .2);
-}
-
-/*^ 14+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="14"])::before {
-    content: "14";
-    border: 3px solid rgb(var(--st-green));
-    color: rgb(var(--st-green));
-    background-color: rgb(var(--st-green), .2);
-}
-
-/*^ 13+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="13"])::before {
-    content: "13";
-    border: 3px solid rgb(var(--st-green));
-    color: rgb(var(--st-green));
-    background-color: rgb(var(--st-green), .2);
-}
-
-/*^ 12+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="12"])::before {
-    content: "12";
-    border: 3px solid rgb(var(--st-green));
-    color: rgb(var(--st-green));
-    background-color: rgb(var(--st-green), .2);
-}
-
-/*^ 10+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="10"])::before {
-    content: "10";
+/*^ 6+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="6"])::before {
+    content: "6";
     border: 3px solid rgb(var(--st-yellow));
     color: rgb(var(--st-yellow));
     background-color: rgb(var(--st-yellow), .2);
@@ -1824,30 +1765,77 @@ body.v6.game_bg.application .game_area_already_owned.page_content {
     background-color: rgb(var(--st-yellow), .2);
 }
 
-/*^ 6+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="6"])::before {
-    content: "6";
+/*^ 10+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="10"])::before {
+    content: "10";
     border: 3px solid rgb(var(--st-yellow));
     color: rgb(var(--st-yellow));
     background-color: rgb(var(--st-yellow), .2);
 }
 
-/*^ 3+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="3"])::before {
-    content: "3";
-    border: 3px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255, .2);
+/*^ 12+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="12"])::before {
+    content: "12";
+    border: 3px solid rgb(var(--st-green));
+    color: rgb(var(--st-green));
+    background-color: rgb(var(--st-green), .2);
 }
 
-/*^ 0+ */
-.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(.game_rating_allages, img[alt*="0"])::before {
-    content: "0";
-    border: 3px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255, .2);
+/*^ 13+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="13"])::before {
+    content: "13";
+    border: 3px solid rgb(var(--st-green));
+    color: rgb(var(--st-green));
+    background-color: rgb(var(--st-green), .2);
 }
 
+/*^ 14+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="14"])::before {
+    content: "14";
+    border: 3px solid rgb(var(--st-green));
+    color: rgb(var(--st-green));
+    background-color: rgb(var(--st-green), .2);
+}
+
+/*^ 15+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="15"])::before {
+    content: "15";
+    border: 3px solid rgb(var(--st-green));
+    color: rgb(var(--st-green));
+    background-color: rgb(var(--st-green), .2);
+}
+
+/*^ 16+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="16"])::before {
+    content: "16";
+    border: 3px solid rgb(var(--st-blue));
+    color: rgb(var(--st-blue));
+    background-color: rgb(var(--st-blue), .2);
+}
+
+/*^ 17+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="17"])::before {
+    content: "17";
+    border: 3px solid rgb(var(--st-blue));
+    color: rgb(var(--st-blue));
+    background-color: rgb(var(--st-blue), .2);
+}
+
+/*^ 18+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="18"])::before {
+    content: "18";
+    border: 3px solid rgb(var(--st-red));
+    color: rgb(var(--st-red));
+    background-color: rgb(var(--st-red), .2);
+}
+
+/*^ 21+ */
+.game_bg.application .game_meta_data .shared_game_rating .game_rating_icon:has(img[alt*="21"])::before {
+    content: "21";
+    border: 3px solid rgb(var(--st-red));
+    color: rgb(var(--st-red));
+    background-color: rgb(var(--st-red), .2);
+}
 
 /** Text */
 /*^ Agency */

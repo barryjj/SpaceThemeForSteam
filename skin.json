@@ -8,10 +8,10 @@
         "repo_name": "SpaceThemeForSteam"
     },
     "tags": [ "WIP", "Modular", "Dark", "Customizable"],
-    "header_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/banner.png",
-    "splash_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/preview/preview.png",
+    "header_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/banner.webp",
+    "splash_image": "https://raw.githubusercontent.com/SpaceTheme/Steam/main/.github/assets/preview/preview.webp",
     "Conditions": {
-        "General - Window Controls": {
+        "Window Controls": {
             "description": "Hide the Window Controls (Minimize, Maximize, Close) from the titlebar",
             "default": "Show",
             "tab": "General",
@@ -28,7 +28,7 @@
         },
 
 
-        "General - Navigation buttons": {
+        "Navigation buttons": {
             "description": "Hide Navigation buttons",
             "default": "no",
             "tab": "General",
@@ -42,7 +42,7 @@
         },
 
 
-        "General - Always show sidebar": {
+        "Always show sidebar": {
             "description": "Always show the sidebar \n (If you have this option on Disabled, and you use the \"Userpannel\" or \"Sidebar only on hover\" option, this option will be overwritten)",
             "default": "Enabled",
             "tab": "General",
@@ -56,7 +56,7 @@
         },
 
 
-        "General - Sidebar only on hover": {
+        "Sidebar only on hover": {
             "description": "Shows only the sidebar in the store on hover",
             "default": "no",
             "tab": "General",
@@ -70,7 +70,7 @@
         },
 
 
-        "General - Friend icon": {
+        "Friend icon": {
             "description": "Hide the friend icon from the game item",
             "default": "no",
             "tab": "General",
@@ -84,7 +84,7 @@
         },
 
 
-        "General - Wallet balance": {
+        "Wallet balance": {
             "description": "Hide wallet balance",
             "default": "no",
             "tab": "General",
@@ -98,7 +98,7 @@
         },
 
 
-        "General - Steam VR button": {
+        "Steam VR button": {
             "description": "Hide Steam VR button from userpannel",
             "default": "no",
             "tab": "General",
@@ -112,7 +112,7 @@
         },
 
 
-        "General - Big Picture Mode button": {
+        "Big Picture Mode button": {
             "description": "Hide Big Picture Mode button from userpannel",
             "default": "no",
             "tab": "General",
@@ -126,7 +126,7 @@
         },
 
 
-        "General - News button": {
+        "News button": {
             "description": "Hide News button from userpannel",
             "default": "no",
             "tab": "General",
@@ -140,7 +140,7 @@
         },
 
 
-        "General - Notification button": {
+        "Notification button": {
             "description": "Hide Notification button from userpannel",
             "default": "no",
             "tab": "General",
@@ -154,7 +154,7 @@
         },
 
 
-        "General - Friend list button": {
+        "Friend list button": {
             "description": "Hide Friend list button from userpannel (only with Userpannel experimental)",
             "default": "no",
             "tab": "General",
@@ -168,7 +168,7 @@
         },
 
 
-        "General - Font": {
+        "Font": {
             "description": "Use a different font for the SteamUI",
             "default": "Be Vietnam Pro (default)",
             "tab": "General",
@@ -186,6 +186,9 @@
                 "Montserrat": {
                     "TargetCss": { "affects": [".*"], "src": "options/fonts/montserrat.css" }
                 },
+                "Google Sans": {
+                    "TargetCss": { "affects": [".*"], "src": "options/fonts/googleSans.css" }
+                },
                 "Quicksand": {
                     "TargetCss": { "affects": [".*"], "src": "options/fonts/quicksand.css" }
                 },
@@ -202,7 +205,7 @@
         },
 
 
-        "General - System accent colors": {
+        "System accent colors": {
             "description": "Replaces the SpaceTheme accent colors with your system accent colors (Only works on Windows)",
             "default": "no",
             "tab": "General",
@@ -216,7 +219,21 @@
         },
 
 
-        "General - Mica & Acrylic plugin support": {
+        "Scrollbars": {
+            "description": "Hides the scrollbars in the SteamUI",
+            "default": "no",
+            "tab": "General",
+            "section": "Other",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": [".*"], "src": "options/general/hideScrollbars.css" }
+                }
+            }
+        },
+
+
+        "Mica & Acrylic plugin support": {
             "description": "Support for Mica and Acrylic plugin https://steambrew.app/plugin?id=b4c58634419b (Only works with the standard theme colors)",
             "default": "no",
             "tab": "General",
@@ -230,7 +247,7 @@
         },
 
 
-        "General - Achievement Notification": {
+        "Achievement Notification": {
             "description": "Hide the Achievment Notification (Sound is still there)",
             "default": "no",
             "tab": "General",
@@ -244,7 +261,7 @@
         },
 
 
-        "General - Userpannel": {
+        "Userpannel": {
             "description": "Moves the user buttons and the download bar to the game sidebar",
             "default": "no",
             "tab": "General",
@@ -259,7 +276,7 @@
         },
 
 
-        "General - Game Overlay": {
+        "Game Overlay": {
             "description": "Game Overlay from the concept",
             "default": "no",
             "tab": "General",
@@ -275,7 +292,7 @@
 
 
 
-        "Store - Broadcast": {
+        "Broadcast": {
             "description": "Hide broadcasts on the store gamepage",
             "default": "no",
             "tab": "Store",
@@ -289,7 +306,7 @@
         },
 
 
-        "Store - Info sidebar on right": {
+        "Info sidebar on right": {
             "description": "Changes the info sidebar from right to left",
             "default": "no",
             "tab": "Store",
@@ -303,7 +320,7 @@
         },
 
 
-        "Store - Write a Review": {
+        "Write a Review": {
             "description": "Hide the Write a Review section",
             "default": "no",
             "tab": "Store",
@@ -317,7 +334,7 @@
         },
 
 
-        "Store - Recommendations": {
+        "Recommendations": {
             "description": "Hide recommendations in the cart",
             "default": "no",
             "tab": "Store",
@@ -331,7 +348,7 @@
         },
 
 
-        "Store - Digital product info": {
+        "Digital product info": {
             "description": "Hides the info that the purchase is a digital product",
             "default": "no",
             "tab": "Store",
@@ -345,7 +362,7 @@
         },
 
 
-        "Store - Follow the creators": {
+        "Follow the creators": {
             "description": "Hide Follow the creators",
             "default": "no",
             "tab": "Store",
@@ -359,7 +376,7 @@
         },
 
 
-        "Store - Landing Header": {
+        "Landing Header": {
             "description": "Hide the landing header (this with the big coin)",
             "default": "no",
             "tab": "Store",
@@ -373,7 +390,7 @@
         },
 
 
-        "Store - URL bar": {
+        "URL bar": {
             "description": "Hide URL bar",
             "default": "no",
             "tab": "Store",
@@ -387,7 +404,7 @@
         },
 
 
-        "Store - Footer": {
+        "Footer": {
             "description": "Hide Valve/Steam footer",
             "default": "no",
             "tab": "Store",
@@ -402,8 +419,7 @@
 
 
 
-
-        "Library - Steam-Custom-Artworks Support": {
+        "Steam-Custom-Artworks Support": {
             "description": "The best support for https://spacetheme.net/#steam-custom-artworks ",
             "default": "no",
             "tab": "Library",
@@ -417,7 +433,7 @@
         },
 
         
-        "Library - What's New": {
+        "What's New": {
             "description": "Customize the What's New section",
             "default": "Compact",
             "tab": "Library",
@@ -434,7 +450,7 @@
         },
 
 
-        "Library - Add shelf button": {
+        "Add shelf button": {
             "description": "Hide Add shelf button in Library",
             "default": "no",
             "tab": "Library",
@@ -448,7 +464,7 @@
         },
 
 
-        "Library - Game cover shiny effect": {
+        "Game cover shiny effect": {
             "description": "Hide shiny effect on game covers",
             "default": "no",
             "tab": "Library",
@@ -462,7 +478,7 @@
         },
 
 
-        "Library - Darken not installed games": {
+        "Darken not installed games": {
             "description": "Darkens game cards when they are not installed",
             "default": "yes",
             "tab": "Library",
@@ -476,7 +492,7 @@
         },
 
 
-        "Library - Banner position": {
+        "Banner position": {
             "description": "Change the position of the banner (applies to all banners)",
             "default": "Middle (default)",
             "tab": "Library",
@@ -493,7 +509,7 @@
         },
 
 
-        "Library - Bigger banner": {
+        "Bigger banner": {
             "description": "Bigger banner on the game page",
             "default": "no",
             "tab": "Library",
@@ -505,9 +521,23 @@
                 }
             }
         },
+
+
+        "Dynamic banner height": {
+            "description": "Scale gamepage banner height with window size to preserve full banner aspect ratio",
+            "default": "no",
+            "tab": "Library",
+            "section": "Gamepage",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": ["^Steam$"], "src": "options/library/gamepage/dynamicBannerHeight.css" }
+                }
+            }
+        },
         
 
-        "Library - Banner Infos": {
+        "Banner Infos": {
             "description": "Only show banner infos (collection, hltb plugin infos) on hover",
             "default": "no",
             "tab": "Library",
@@ -521,7 +551,7 @@
         },
 
 
-        "Library - Always show game infos": {
+        "Always show game infos": {
             "description": "Always show game infos on the game page",
             "default": "no",
             "tab": "Library",
@@ -535,7 +565,7 @@
         },
 
 
-        "Library - Game info box artwork": {
+        "Game info box artwork": {
             "description": "Hide Artwork in game info box",
             "default": "no",
             "tab": "Library",
@@ -549,7 +579,7 @@
         },
 
 
-        "Library - Sidebar on left": {
+        "Sidebar on left": {
             "description": "Changes the sidebar on the game page from right to left",
             "default": "no",
             "tab": "Library",
@@ -565,7 +595,23 @@
 
 
 
-        "Community - VAC-Ban visibility": {
+        "Hide group chat": {
+            "description": "Hides the group chat section in the friends list",
+            "default": "no",
+            "tab": "Friends & Chat",
+            "section": "Firends list",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": { "affects": [".friendsui-container"], "src": "options/friendsAndChat/list/hideGroupChats.css" }
+                }
+            }
+        },
+
+
+
+
+        "VAC-Ban visibility": {
             "description": "Hide the VAC ban from your profile or on all profiles",
             "default": "Show",
             "tab": "Community",
@@ -582,7 +628,7 @@
         },
 
 
-        "Community - Profile pages header": {
+        "Profile pages header": {
             "description": "Hide the profile pages header",
             "default": "no",
             "tab": "Community",
@@ -612,9 +658,13 @@
             "TargetJs": "src/js/libraryroot.custom.js"
         },
         {
+            "MatchRegexString": "https://.*\\.steampowered\\.com(/.*)?",
+            "TargetJs": "src/js/webkit.js"
+        },
+        {
             "MatchRegexString": "https://steamcommunity\\.com(/.*)?",
             "TargetCss": "src/css/custom/custom.css",
-            "TargetJs": "src/css/custom/custom.js"
+            "TargetJs": "src/js/webkit.js"
         },
         {
             "MatchRegexString": ".ModalDialogPopup",
@@ -637,6 +687,11 @@
             "TargetJs": "src/js/menu.custom.js"
         },
         {
+            "MatchRegexString": "^Steam$",
+            "TargetCss": "src/css/menu.custom.css",
+            "TargetJs": "src/js/menu.custom.js"
+        },
+        {
 			"MatchRegexString": "^notificationtoasts_",
 			"TargetCss": "src/css/notifications.custom.css",
 			"TargetJs": "src/css/notifications.custom.js"
@@ -648,10 +703,6 @@
         {
             "MatchRegexString": "^Steam Settings",
             "TargetCss": "src/css/steam/settings.css"
-        },
-        {
-            "MatchRegexString": "[data-theme-name=\"SpaceTheme for Steam\"]",
-            "TargetCss": "options/settings.css"
         },
         {
             "MatchRegexString": "[href=\"/css/gamerecording.css\"]",

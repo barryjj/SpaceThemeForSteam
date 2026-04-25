@@ -22,6 +22,8 @@
 
 /*^ Profile */
 @import url("./webkit/community/profile/awards.css");
+@import url("./webkit/community/profile/friendsThatPlay.css");
+@import url("./webkit/community/profile/badges.css");
 @import url("./webkit/community/profile/user.css");
 
 /*^ Workshop */
@@ -82,11 +84,12 @@ body .market_page_fullwidth,
 body #BG_bottom,
 body .maincontent,
 body ._22xtsolKcQit92o-LBeRWD {
-    position: relative;
+    position: relative !important;
     width: 100% !important;
     max-width: var(--st-store-max-width) !important;
     margin: 0 auto !important;
     padding: 0 !important;
+    background: unset !important;
 }
 
 /*! Steam Replay page */
@@ -112,7 +115,8 @@ body .discount_block.empty {
     display: none !important;
 }
 
-body .discount_block {
+body .discount_block,
+body .a3nhjc9lykk- {
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
@@ -127,7 +131,8 @@ body .discount_block {
     background-color: rgb(var(--st-color-1)) !important;
 }
 
-body .discount_block .discount_pct {
+body .discount_block .discount_pct,
+body .a3nhjc9lykk- .XXn-kJ7FSrw- {
     height: unset !important;
     padding: 4px 6px !important;
     font-size: 18px !important;
@@ -138,7 +143,8 @@ body .discount_block .discount_pct {
     background-color: rgb(var(--st-green), .3) !important;
 }
 
-body .discount_block .discount_prices {
+body .discount_block .discount_prices,
+body .a3nhjc9lykk- .ME2eMO7C1Tk- {
     display: flex !important;
     flex-direction: column !important;
     align-items: end !important;
@@ -147,15 +153,25 @@ body .discount_block .discount_prices {
     background-color: unset !important;
 }
 
-body .discount_block .discount_prices .discount_final_price {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+body .game_purchase_discount .discount_original_price,
+body .a3nhjc9lykk- .ywNldZ-YzEE- {
+    position: relative !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+body .discount_block .discount_prices .discount_final_price,
+body .a3nhjc9lykk- .DOnsaVcV0Is- {
+    padding: 0 !important;
     font-size: 14px !important;
     font-weight: 600 !important;
     line-height: unset !important;
     color: rgb(var(--st-green)) !important;
 }
-body .discount_block.no_discount .discount_prices .discount_final_price {
+body .discount_block.no_discount .discount_prices .discount_final_price,
+body .a3nhjc9lykk-:not(:has(.MKj0TKJbfZY-[aria-label*="%"])) .DOnsaVcV0Is- {
     color: #fff !important;
 }
 
@@ -683,14 +699,15 @@ body.v6 [class*="skeleton"] {
 /*
 & Profile Pages Header
 */
-body .profile_small_header_bg {
+body.responsive_page .profile_small_header_bg {
     overflow: hidden;
     max-width: var(--st-store-max-width);
     height: unset;
     margin: 0 auto 32px;
+    background: unset;
 }
 
-body .profile_small_header_bg .profile_small_header_texture {
+body.responsive_page .profile_small_header_bg .profile_small_header_texture {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -706,7 +723,7 @@ body .profile_small_header_bg .profile_small_header_texture {
 /*
 ! Avatar
 */
-body .profile_small_header_bg .profile_small_header_avatar {
+body.responsive_page .profile_small_header_bg .profile_small_header_avatar {
     position: unset;
 }
 
@@ -714,7 +731,7 @@ body .profile_small_header_bg .profile_small_header_avatar {
 /*
 ! Text
 */
-body .profile_small_header_bg .profile_small_header_text {
+body.responsive_page .profile_small_header_bg .profile_small_header_text {
     position: unset;
     display: flex;
     align-items: center;
@@ -727,10 +744,28 @@ body .profile_small_header_bg .profile_small_header_text {
 
 
 /** Username */
-body .profile_small_header_bg .profile_small_header_name {
+body.responsive_page .profile_small_header_bg .profile_small_header_name {
     font-size: 28px;
     font-weight: 700;
     line-height: normal;
+}
+
+
+/*
+! Additonal/GameHeader
+*/
+body.responsive_page .profile_small_header_bg .profile_small_header_additional {
+    position: unset;
+    margin-left: auto;
+}
+
+body.responsive_page .profile_small_header_bg .profile_small_header_additional .gameLogo {
+    overflow: hidden;
+    height: 68px;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    background: unset;
 }
 
 
